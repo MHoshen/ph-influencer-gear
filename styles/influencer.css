@@ -17,6 +17,10 @@
   font-style: normal;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-semi-bold {
   font-weight: 600;
 }
@@ -111,11 +115,75 @@ header {
 
 /* #endregion banner */
 
+/* #region advertisement */
+.addv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 165px;
+  margin-right: 165px;
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.addv-img {
+  padding: 42px 60px;
+}
+
+/* #engregion advertisement */
+
+/* #region collection */
+.collection-container {
+  margin: 0 196px;
+}
+
+.collection-header {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 40px;
+}
+.collection-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  padding: 17px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.75rem;
+}
+.card-value {
+  font-size: 1.5rem;
+  padding: 5px 0;
+}
+
+.card-rating {
+  font-size: 0.88rem;
+}
+/* #endregion collection */
+
 /* #region media queries */
 
 @media screen and (max-width: 576px) {
-  header {
+  header,
+  .addv-container,
+  .collection-container {
     margin: 0 auto;
+  }
+
+  .addv-img {
+    padding: 15px 20px;
   }
   .navbar,
   .navbar-items {
@@ -147,6 +215,10 @@ header {
 
   .banner-description {
     font-size: 0.88rem;
+  }
+
+  .collection-card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
